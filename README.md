@@ -8,7 +8,7 @@ different sayings.  Since I used it as part of the learning process, I also incl
 To run this application you simply need a web browser that support javascript.  Copy the code, including the javascript
 files into a folder on you device and open the main.html file.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/AK7rLgGwhcg)
 
 # Development Environment
 
