@@ -1,0 +1,99 @@
+<!-- HTML File for Currency Converter-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>Chris' Currency Converter</title>
+    <script type = "text/JavaScript" src = "https://MomentJS.com/downloads/moment.js"></script>
+</head>
+
+
+
+<body>
+    <!-- Table to display the currency converter -->
+    <table border="1" cellspacing="1" cellpadding="5" class="center" style="margin-left:auto;margin-right:auto;"> 
+        <tr><h1 style="color:blue"><center>Chris' Currency Converter</center></h1></tr>
+        <tr><td width="400" colspan="2">
+            <p align="center" style="color:green">
+                    This page will help you convert different currencies. <br>
+                    Simply enter the starting currency and select the currency you wish convert it to,
+                    then enter the amount you wish to covert and press the "convert" button or
+                    press the "show all" button to see all the conversions.
+                </p>
+        </td></tr>
+        <form>
+            <tr>
+                <!-- Drop down menu to select the starting currency -->
+                <td><label>Starting Currency</label></td>
+                <td align="center"><select id="startingCurrency">
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - UK Pounds</option>
+                    <option value="CHF">CHF - Swiss Franc</option>
+                    <option value="PLN">PLN - Polish Zloty</option>
+                    <option value="CAD">CAD - Canadian Dollar</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <!-- Drop down menu to select the currency to convert to -->
+                <td><label>New Currency</label></td>
+                <td align="center"><select id="newCurrency">
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="GBP">GBP - UK Pounds</option>
+                    <option value="CHF">CHF - Swiss Franc</option>
+                    <option value="PLN">PLN - Polish Zloty</option>
+                    <option value="CAD">CAD - Canadian Dollar</option>
+                    </select></td>
+            </tr> 
+            <tr>
+                <!-- Input box to enter the amount to convert -->
+                <<td></td>>
+                <td align="center"><div>
+                    <input type="number" step=".01" id="startingAmount" placeholder="Enter Amount">
+                </div></td>
+            </tr>
+            <tr>
+                <!-- Buttons to either convert the currency selected or show all the conversions -->
+                <td colspan="2" align="center">
+                    <div><button type="button" id="convert">Convert</button></div>
+                    <div>&nbsp;</div>
+                    <div><button type="button" id="convertAll">Show All</button></div>
+                    </td>
+            </tr>
+            <tr>
+                <!-- Display the results of the conversion from either singleCurrency.js or allCurrency.js -->
+                <td colspan="2" align="center" style="color:red;font:bold"><div>
+                <p id="result"></p>
+                </div>
+                <!-- Display the current time using the moment.js CDN -->
+                <div style = "color:black;font-size:12px" id = "todaysdate"></div>
+                <script type = "text/JavaScript">
+                   var a = moment().toString();
+                   document.getElementById("todaysdate").innerHTML = a;
+                </script></td>
+            </tr>
+        </form>       
+    </table>
+
+    <br><br>
+
+    <!-- Table to display a random thought that is genterated from sayings.js -->
+    <table border="0" cellspacing="0" cellpadding="0" class="center" style="margin-left:auto;margin-right:auto;">
+        <tr>
+            <td colspan="2" align="center" style="color:blueviolet"><h3>Thought of the day</h3></td>
+        </tr>
+        <tr>
+            <td colspan="2"><div id="sayings"></div></td>
+        </tr>
+    </table>
+
+<!-- Links to External Javascript files -->
+<script src="loadScript.js"></script>
+<script src="singleCurrency.js"></script>
+<script src="allCurrency.js"></script>
+<script src="sayings.js"></script>
+
+</body>
+</html> 
